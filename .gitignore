@@ -1,0 +1,8 @@
+clone/
+*.pyc
+__pycache__/
+*.exe
+*.dll
+.venv/
+log/
+logs/
