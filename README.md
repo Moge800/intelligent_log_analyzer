@@ -53,8 +53,8 @@ pip install -r requirements.txt
 ### 2. GPU環境の確認（推奨）
 
 ```bash
-# GPU環境テスト
-python src/utils/gpu_test.py
+# GPU環境テスト（適切なPYTHONPATH設定付き）
+PYTHONPATH=/path/to/intelligent_log_analyzer python src/utils/gpu_test.py
 ```
 
 ### 3. 初回実行時の注意
@@ -63,8 +63,8 @@ python src/utils/gpu_test.py
 インターネット接続が必要です。
 
 ```bash
-# メイン実行
-python main.py
+# メイン実行（適切なPYTHONPATH設定付き）
+PYTHONPATH=/path/to/intelligent_log_analyzer python main.py
 ```
 
 ## 使用方法
@@ -72,8 +72,8 @@ python main.py
 ### メインアプリケーションの実行
 
 ```bash
-# デモログを生成して分析実行
-python main.py
+# デモログを生成して分析実行（適切なPYTHONPATH設定付き）
+PYTHONPATH=/path/to/intelligent_log_analyzer python main.py
 ```
 
 ### 基本的な使用例
@@ -103,11 +103,11 @@ print(custom_summary)
 ### デモの実行
 
 ```bash
-# 基本使用例
-python examples/basic_usage.py
+# 基本使用例（適切なPYTHONPATH設定付き）
+PYTHONPATH=/path/to/intelligent_log_analyzer python examples/basic_usage.py
 
-# 詳細なデモ
-python examples/demo_log_analysis.py
+# 詳細なデモ（適切なPYTHONPATH設定付き）
+PYTHONPATH=/path/to/intelligent_log_analyzer python examples/demo_log_analysis.py
 ```
 
 ## 機能
@@ -189,8 +189,8 @@ solutions = kb.search_solutions(["データベース", "接続"])
 
 #### 1. GPU関連エラー
 ```bash
-# GPU環境確認
-python src/utils/gpu_test.py
+# GPU環境確認（適切なPYTHONPATH設定付き）
+PYTHONPATH=/path/to/intelligent_log_analyzer python src/utils/gpu_test.py
 
 # GPU使用しない場合
 # config/settings.py で USE_GPU = False に設定
