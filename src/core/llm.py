@@ -63,6 +63,11 @@ class LLM:
         elif load_in_4bit:
             model_kwargs["load_in_4bit"] = True
 
+        if settings.LOW_MEMORY:
+            model_kwargs["low_cpu_mem_usage"] = True
+
+        # --- IGNORE ---
+
         self.model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
 
         # 手動でデバイスに移動する場合（device_mapを使わない場合）

@@ -11,3 +11,4 @@ FORCE_GPU = False  # GPUが利用できない場合でもエラーを出すか�
 GPU_DEVICE = "auto"  # "auto", "cuda:0", "cuda:1", "balanced", "balanced_low_0" など
 TORCH_DTYPE = "auto"  # "auto", "float16", "float32", "bfloat16" など
 QUANTIZATION = None  # None, "8bit", "4bit"
+LOW_MEMORY = False  # Low memory mode
