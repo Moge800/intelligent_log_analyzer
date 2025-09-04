@@ -98,6 +98,9 @@ class LLM:
         self.custom_system_prompt = settings.CUSTOM_SYSTEM_PROMPT
         self.max_tokens = settings.DEFAULT_MAX_TOKENS
 
+        print(f"LLM initialized with model: {model_name}")
+        print(f"settings max_tokens: {self.max_tokens}")
+
     def process(self, messages):
         prompt = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         token_ids = self.tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
