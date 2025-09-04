@@ -1,8 +1,10 @@
 # sample
 
 # gpu test
-if False:
+if True:
     from src.utils import gpu_test
+
+    gpu_test.test_gpu_environment()
 
 
 from examples import basic_usage, demo_log_analysis
