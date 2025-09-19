@@ -1,4 +1,5 @@
 MODEL = "elyza/Llama-3-ELYZA-JP-8B"
+LLM_BACKEND = "transformers"  # "transformers" or "ollama"
 DEFAULT_MAX_TOKENS = 1200
 DEFAULT_SYSTEM_PROMPT = (
     "あなたは誠実で優秀な日本人のアシスタントです。特に指示が無い場合は、常に日本語で回答してください。"

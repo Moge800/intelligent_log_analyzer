@@ -2,7 +2,6 @@ import os
 import re
 from pathlib import Path
 from ..core.rag import RAG
-from ..core.llm import LLM
 from ..core.knowledge_base import KnowledgeBase
 import sys
 
@@ -13,7 +12,15 @@ from config import settings
 class LogSummarizer:
     def __init__(self, model_name=None, knowledge_base_path="data/knowledge_base.csv"):
         """ログ要約システムの初期化"""
-        self.llm = LLM(model_name or settings.MODEL)
+        if settings.LLM_BACKEND == "transformers":
+            from ..core.llm import LLM
+
+            self.llm = LLM(model_name or settings.MODEL)
+        else:
+            from ..core.llm_ollama import OllamaLLM
+
+            self.llm = OllamaLLM(model_name or settings.MODEL)
+
         self.rag = RAG()
         self.knowledge_base = KnowledgeBase(knowledge_base_path)
         self.log_patterns = {
